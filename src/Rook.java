@@ -8,4 +8,10 @@ public class Rook extends Piece {
         this.location = p;
         this.Color = c;
     }
+
+
+    boolean isMoveLegal(Point target) {
+
+        return true;
+    }
 }

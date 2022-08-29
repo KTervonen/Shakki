@@ -11,7 +11,7 @@ public class Pawn extends Piece {
 
     boolean isMoveLegal(Point target) {
         if (target.y > location.y) {
-            if (target.y - location.y <= 2 && location.y == 1) {
+            if (target.y - location.y <= 2 && location.y == 1 && target.x == location.x) {
                 System.out.println("first move");
                 return true;
             }
@@ -20,8 +20,9 @@ public class Pawn extends Piece {
                     System.out.println("eat piece");
                     return true;
                 }
-                if (true) {
+                if (target.x == location.x && target.y - location.y == 1) {
                     System.out.println("Normal move. Check if square is free.");
+                    return true;
                 }
             }
         }
